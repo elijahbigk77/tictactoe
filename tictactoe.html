@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <!--Game Name-->
+    <header>
+        <h1>Tic-Tac-Toe Game</h1>
+    </header>
+
+    <div class="container">
+        <!-- Display the current player's turn -->
+        <div id="currentPlayerTurn">
+            <p>Current Turn: <span id="currentPlayer"></span></p>
+        </div>
+        
+        <!--Game Board with cells-->
+        <div class="board">
+            <div class="cell" id="cell-0"></div>
+            <div class="cell" id="cell-1"></div>
+            <div class="cell" id="cell-2"></div>
+            <div class="cell" id="cell-3"></div>
+            <div class="cell" id="cell-4"></div>
+            <div class="cell" id="cell-5"></div>
+            <div class="cell" id="cell-6"></div>
+            <div class="cell" id="cell-7"></div>
+            <div class="cell" id="cell-8"></div>
+        </div>
+    </div>
+
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+        <h2>Scoreboard</h2>
+        <div id="playerXScore">
+            <span id="player1Label">Player 1 - (X):</span>
+            <span id="scoreX">0</span>
+        </div>
+        <div id="playerOScore">
+            <span id="player2Label">Player 2 - (O):</span>
+            <span id="scoreO">0</span>
+        </div>
+        <!--Undo Button-- Not Impleented Yet
+        <button id="undoButton" type="button">Undo</button> -->
+    </div>
+    <div class="mode-toggle">
+        <label for="modeToggle">Player vs. Computer</label>
+        <input type="checkbox" id="modeToggle">
+      </div>
+      
+    <!--Link to Game instructions-->
+    </div>
+        <p class="learn"> Learn how to play <a rel="noopener noreferrer" href="https://shorturl.at/EFR17" target="_blank">Tic-Tac-Toe</a></p>
+    </div>
+    <footer>
+            <p>By Elijah Opoku-Nyarko</p>
+    </footer>
+
+    <!-- Start Game Popup -->
+<div id="startGamePopup" class="modal">
+    <div class="modal-content">
+        <h2>Welcome to Tic-Tac-Toe!</h2>
+        <p>Enter Player Names:</p>
+        <form id="playerNamesForm">
+            <label for="player1Name">Player 1 Name:</label>
+            <input type="text" id="player1Name" required>
+            <br>
+            <label for="player2Name">Player 2 Name:</label>
+            <input type="text" id="player2Name" required>
+            <br>
+            <button id="startGameButton" type="submit">Start Game</button>
+        </form>
+    </div>
+</div>
+
+    <!--Popup for when game ends in a win-->
+    <div id="winner-popup" class="modal">
+        <div class="modal-content">
+          <h2>Winner Message</h2>
+          <p id="winner-message"></p>
+          <div id="winning-combination"></div>
+          <button id="restartGameButton" type="button">Restart Game</button>
+        </div>
+      </div>
+
+      <!--Popup for when game ends in a draw-->
+      <div id="draw-popup" class="modal">
+        <div class="modal-content">
+          <h2>Draw</h2>
+          <p>No one wins. It's a draw!</p>
+          <button id="restartDrawButton" type="button">Restart Game</button>
+        </div>
+      </div>
+    
+<script src="script.js"></script>
+</body>
+
+</html>
